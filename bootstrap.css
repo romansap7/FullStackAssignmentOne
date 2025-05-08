@@ -1,0 +1,110 @@
+
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --accent-color: #fd7e14;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #28a745;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.code-block {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-img {
+    background-image: url('https://via.placeholder.com/1920x1080?text=Bootstrap+Background');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.bg-img h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.bg-img p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.navbar-custom {
+    background: linear-gradient(135deg, var(--primary-color), #0b5ed7);
+}
+
+.interactive-example {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+}
+
+.section-header {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+}
+
+/* Progress bar */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #f1f1f1;
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+/* Interactive example enhancements */
+.interactive-example {
+    background-color: #f8f9fa;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

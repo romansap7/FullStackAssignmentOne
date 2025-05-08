@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Development Learning Guide</title>
+    <link rel="stylesheet" href="fullstack.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Full Stack Development Learning Guide</h1>
+            <p>Master the complete web development technology stack</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav id="sidebar">
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#frontend">Front-End Development</a></li>
+                <li><a href="#backend">Back-End Development</a></li>
+                <li><a href="#database">Databases</a></li>
+                <li><a href="#api">APIs</a></li>
+                <li><a href="#devops">DevOps & Cloud</a></li>
+                <li><a href="#testing">Testing</a></li>
+                <li><a href="#real-world">Real-World Example</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="intro">
+                <h2>Introduction to Full Stack Development</h2>
+                <p>Full stack development refers to the complete process of building a web application, encompassing both the client-side (front-end) and server-side (back-end) aspects, as well as database management and other technologies necessary for a fully functional application.</p>
+
+                <p>A full stack developer possesses knowledge and skills in all areas of web development, allowing them to handle every aspect of application development from design to deployment.</p>
+
+                <h3>Core Components of Full Stack Development</h3>
+                <ul>
+                    <li>Front-End Development: Creating the user interface and client-side logic</li>
+                    <li>Back-End Development: Building the server, database, and application logic</li>
+                    <li>Databases: Storing and managing data</li>
+                    <li>APIs: Enabling communication between different parts of an application</li>
+                    <li>DevOps: Ensuring smooth deployment and operation of applications</li>
+                    <li>Testing: Validating application functionality and performance</li>
+                </ul>
+
+                <h3>Brief History and Evolution</h3>
+                <p>The concept of full stack development has evolved significantly over the years. Early web development involved simple static pages with minimal interactivity. As the internet grew, so did the complexity of web applications.</p>
+
+                <p>Modern full stack development involves sophisticated technologies and practices that enable the creation of rich, interactive web applications that rival native desktop applications in functionality.</p>
+            </section>
+
+            <section id="frontend">
+                <h2>Front-End Development</h2>
+                <p>Front-end development focuses on creating the user interface and user experience of a web application. This involves working with technologies that run in the user's browser.</p>
+
+                <h3>Core Technologies</h3>
+                <ul>
+                    <li><strong>HTML (HyperText Markup Language)</strong>: The standard markup language for creating web pages.</li>
+                    <li><strong>CSS (Cascading Style Sheets)</strong>: Used for styling and layout of HTML documents.</li>
+                    <li><strong>JavaScript</strong>: The programming language that adds interactivity to websites.</li>
+                </ul>
+
+                <h3>Popular Frameworks</h3>
+                <ul>
+                    <li><strong>React</strong>: A JavaScript library for building user interfaces developed by Facebook.</li>
+                    <li><strong>Angular</strong>: A comprehensive JavaScript framework developed by Google.</li>
+                    <li><strong>Vue.js</strong>: A progressive JavaScript framework for building user interfaces.</li>
+                </ul>
+
+                <h3>Code Example: Responsive Header Component</h3>
+                <p>The following example demonstrates a responsive header component using HTML, CSS, and JavaScript:</p>
+                
+                <div class="code-example">
+                    <pre><code><span class="keyword">&lt;!DOCTYPE html&gt;</span>
+<span class="keyword">&lt;html&gt;</span>
+<span class="keyword">&lt;head&gt;</span>
+    <span class="keyword">&lt;title&gt;</span>Responsive Header Example<span class="keyword">&lt;/title&gt;</span>
+    <span class="keyword">&lt;style&gt;</span>
+        <span class="function">.header</span> {
+            background-color: <span class="string">#333</span>;
+            color: white;
+            padding: <span class="string">1rem</span>;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        <span class="function">.menu-button</span> {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: <span class="string">1.5rem</span>;
+            cursor: pointer;
+        }
+
+        <span class="function">.nav-links</span> {
+            display: flex;
+            list-style: none;
+        }
+
+        <span class="function">.nav-links</span> <span class="function">li</span> {
+            margin-left: <span class="string">1rem</span>;
+        }
+
+        <span class="function">.nav-links</span> <span class="function">a</span> {
+            color: white;
+            text-decoration: none;
+        }
+
+        <span class="code-comment">@media (max-width: 768px)</span> {
+            <span class="function">.menu-button</span> {
+                display: block;
+            }
+
+            <span class="function">.nav-links</span> {
+                display: none;
+                flex-direction: column;
+                width: <span class="string">100%</span>;
+            }
+
+            <span class="function">.nav-links.active</span> {
+                display: flex;
+            }
+
+            <span class="function">.nav-links</span> <span class="function">li</span> {
+                margin: <span class="string">0.5rem 0</span>;
+            }
+        }
+    <span class="keyword">&lt;/style&gt;</span>
+<span class="keyword">&lt;/head&gt;</span>
+<span class="keyword">&lt;body&gt;</span>
+    <span class="keyword">&lt;header class="header"&gt;</span>
+        <span class="keyword">&lt;div class="logo"&gt;</span>My App<span class="keyword">&lt;/div&gt;</span>
+        <span class="keyword">&lt;button class="menu-button" id="menuButton"&gt;</span>☰<span class="keyword">&lt;/button&gt;</span>
+        <span class="keyword">&lt;ul class="nav-links" id="navLinks"&gt;</span>
+            <span class="keyword">&lt;li&gt;&lt;a href="#"&gt;</span>Home<span class="keyword">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="keyword">&lt;li&gt;&lt;a href="#"&gt;</span>About<span class="keyword">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="keyword">&lt;li&gt;&lt;a href="#"&gt;</span>Contact<span class="keyword">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="keyword">&lt;/ul&gt;</span>
+    <span class="keyword">&lt;/header&gt;</span>
+
+    <span class="keyword">&lt;script&gt;</span>
+        <span class="keyword">const menuButton</span> = document.getElementById('menuButton');
+        <span class="keyword">const navLinks</span> = document.getElementById('navLinks');
+
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    <span class="keyword">&lt;/script&gt;</span>
+<span class="keyword">&lt;/body&gt;</span>
+<span class="keyword">&lt;/html&gt;</span></code></pre>
+                </div>
+
+                <a href="https://github.com/yourusername/frontend-starter" class="explore-btn" target="_blank">Explore Front-End Starter Project</a>
+            </section>
+
+            <section id="backend">
+                <h2>Back-End Development</h2>
+                <p>Back-end development involves server-side operations, including business logic, database interactions, and application functionality. It's the backbone that powers the user interface created in front-end development.</p>
+
+                <h3>Server-Side Languages</h3>
+                <ul>
+                    <li><strong>JavaScript (Node.js)</strong>: Enables server-side JavaScript execution</li>
+                    <li><strong>Python</strong>: Known for its simplicity and powerful frameworks</li>
+                    <li><strong>Java</strong>: Popular for enterprise-level applications</li>
+                    <li><strong>Ruby</strong>: Known for its developer-friendly syntax</li>
+                    <li><strong>PHP</strong>: Powers a significant portion of the web including WordPress</li>
+                    <li><strong>C#</strong>: Used with Microsoft's .NET framework</li>
+                </ul>
+
+                <h3>Popular Frameworks</h3>
+                <ul>
+                    <li><strong>Express.js</strong>: Minimalist framework for Node.js</li>
+                    <li><strong>Django</strong>: High-level Python framework</li>
+                    <li><strong>Ruby on Rails</strong>: Follows convention over configuration principle</li>
+                    <li><strong>Spring Boot</strong>: Java framework for creating microservices</li>
+                    <li><strong>Laravel</strong>: PHP framework with elegant syntax</li>
+                </ul>
+
+                <h3>Code Example: REST API Endpoint</h3>
+                <p>The following example demonstrates a simple user registration endpoint using Node.js and Express:</p>
+
+                <div class="code-example">
+                    <pre><code><span class="keyword">const express</span> = require('express');
+<span class="keyword">const bcrypt</span> = require('bcrypt');
+<span class="keyword">const jwt</span> = require('jsonwebtoken');
+<span class="keyword">const User</span> = require('../models/user');  <span class="code-comment">// Assuming a User model</span>
+
+<span class="keyword">const router</span> = express.Router();
+
+<span class="code-comment">// POST /api/users/register</span>
+router.post('/register', async (req, res) => {
+    try {
+        <span class="code-comment">// Destructure name, email, and password from the request body</span>
+        const { name, email, password } = req.body;
+
+        <span class="code-comment">// Check if user already exists</span>
+        const existingUser = await User.findOne({ email });
+        if (existingUser) {
+            return res.status(400).json({ message: 'User already exists' });
+        }
+
+        <span class="code-comment">// Hash the password</span>
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(password, salt);
+
+        <span class="code-comment">// Create new user</span>
+        const newUser = new User({
+            name,
+            email,
+            password: hashedPassword  <span class="code-comment">// Store hashed password</span>
+        });
+
+        <span class="code-comment">// Save user to database</span>
+        await newUser.save();
+
+        <span class="code-comment">// Generate JWT token</span>
+        const token = jwt.sign(
+            { userId: newUser._id },
+            process.env.JWT_SECRET,
+            { expiresIn: '1h' }
+        );
+
+        res.status(201).json({
+            message: 'User registered successfully',
+            token,
+            user: {
+                id: newUser._id,
+                name: newUser.name,
+                email: newUser.email
+            }
+        });
+    } catch (error) {
+        res.status(500).json({ message: 'Server error', error: error.message });
+    }
+});
+
+module.exports = router;</code></pre>
+                </div>
+
+                <a href="https://github.com/yourusername/backend-boilerplate" class="explore-btn" target="_blank">Explore Backend Boilerplate</a>
+            </section>
+
+            <section id="database">
+                <h2>Databases</h2>
+                <p>Databases are essential for storing, organizing, and retrieving data in web applications. Choosing the right database system depends on the application's requirements, including data structure, scalability needs, and query patterns.</p>
+
+                <h3>Relational vs NoSQL Databases</h3>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Relational Databases</th>
+                            <th>NoSQL Databases</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Model</td>
+                            <td>Tabular (rows and columns)</td>
+                            <td>Document, key-value, graph, or column-family</td>
+                        </tr>
+                        <tr>
+                            <td>Schema</td>
+                            <td>Fixed schema (defined upfront)</td>
+                            <td>Flexible schema (can be modified easily)</td>
+                        </tr>
+                        <tr>
+                            <td>Query Language</td>
+                            <td>SQL (Structured Query Language)</td>
+                            <td>Varies by database type (often uses custom query languages)</td>
+                        </tr>
+                        <tr>
+                            <td>Scalability</td>
+                            <td>Vertical scaling (upgrade hardware)</td>
+                            <td>Horizontal scaling (add more servers)</td>
+                        </tr>
+                        <tr>
+                            <td>ACID Compliance</td>
+                            <td>Typically ACID-compliant</td>
+                            <td>Some provide ACID, others use BASE (Basically Available, Soft state, Eventual consistency)</td>
+                        </tr>
+                        <tr>
+                            <td>Use Cases</td>
+                            <td>Complex queries, transactions requiring ACID compliance</td>
+                            <td>Large volumes of unstructured data, high scalability needs</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Popular Database Systems</h3>
+                <ul>
+                    <li><strong>Relational Databases</strong>:
+                        <ul>
+                            <li>PostgreSQL</li>
+                            <li>MySQL</li>
+                            <li>Microsoft SQL Server</li>
+                            <li>Oracle Database</li>
+                        </ul>
+                    </li>
+                    <li><strong>NoSQL Databases</strong>:
+                        <ul>
+                            <li>MongoDB (Document)</li>
+                            <li>Redis (Key-value)</li>
+                            <li>Cassandra (Column-family)</li>
+                            <li>Neo4j (Graph)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Schema Design Example</h3>
+                <p>The following example demonstrates a simple schema design for a blog application using PostgreSQL:</p>
+
+                <div class="code-example">
+                    <pre><code><span class="keyword">CREATE TABLE</span> users (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+<span class="keyword">CREATE TABLE</span> posts (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    content TEXT NOT NULL,
+    user_id INT REFERENCES users(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+<span class="keyword">CREATE TABLE</span> comments (
+    id SERIAL PRIMARY KEY,
+    content TEXT NOT NULL,
+    user_id INT REFERENCES users(id),
+    post_id INT REFERENCES posts(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+                </div>
+
+                <a href="https://www.db-clarity.com/database-comparison-tool" class="explore-btn" target="_blank">Explore Database Comparison Tool</a>
+            </section>
+
+            <section id="api">
+                <h2>APIs (Application Programming Interfaces)</h2>
+                <p>APIs define how different software components should interact. They enable communication between various parts of an application or between different applications.</p>
+
+                <h3>REST vs GraphQL</h3>
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>REST</th>
+                            <th>GraphQL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Architecture</td>
+                            <td>Client-server</td>
+                            <td>Client-server</td>
+                        </tr>
+                        <tr>
+                            <td>Endpoints</td>
+                            <td>Multiple endpoints (one per resource)</td>
+                            <td>Single endpoint</td>
+                        </tr>
+                        <tr>
+                            <td>Data Fetching</td>
+                            <td>Fixed data structures (over-fetching or under-fetching possible)</td>
+                            <td>Client specifies exact data needs</td>
+                        </tr>
+                        <tr>
+                            <td>Performance</td>
+                            <td>May require multiple requests for related data</td>
+                            <td>Single request for all needed data</td>
+                        </tr>
+                        <tr>
+                            <td>Learning Curve</td>
+                            <td>Simple for basic use cases</td>
+                            <td>Steeper learning curve</td>
+                        </tr>
+                        <tr>
+                            <td>Use Cases</td>
+                            <td>Simple data requirements, third-party integrations</td>
+                            <td>Complex data requirements, mobile applications</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Authentication Methods</h3>
+                <ul>
+                    <li><strong>Basic Authentication</strong>: Simple username/password sent in headers (not secure for production)</li>
+                    <li><strong>API Keys</strong>: Unique identifier added to requests (often in headers or query parameters)</li>
+                    <li><strong>OAuth</strong>: Delegation framework that allows users to grant access without sharing credentials</li>
+                    <li><strong>JWT (JSON Web Tokens)</strong>: Compact, URL-safe tokens containing claims (user identity and other data)</li>
+                </ul>
+
+                <h3>Code Example: API Integration</h3>
+                <p>The following example demonstrates integrating a payment API using JavaScript fetch:</p>
+
+                <div class="code-example">
+                    <pre><code><span class="keyword">async function</span> processPayment(amount, token) {
+    try {
+        <span class="code-comment">// API endpoint for processing payments</span>
+        const apiEndpoint = 'https://api.paymentgateway.com/v1/charges';
+
+        <span class="code-comment">// Payment data to send</span>
+        const paymentData = {
+            amount,
+            currency: 'usd',
+            source: token,
+            description: 'Test payment',
+        };
+
+        <span class="code-comment">// Configure API request</span>
+        const response = await fetch(apiEndpoint, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${process.env.PAYMENT_API_SECRET_KEY}`,
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(paymentData),
+        });
+
+        <span class="code-comment">// Handle API response</span>
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(`Payment failed: ${errorData.error.message}`);
+        }
+
+        const paymentResult = await response.json();
+        return paymentResult;
+
+    } catch (error) {
+        console.error('Error processing payment:', error);
+        throw error;
+    }
+}
+
+<span class="code-comment">// Usage example</span>
+processPayment(1000, 'tok_visa')  <span class="code-comment">// Amount in cents, example token</span>
+    .then(result => console.log('Payment successful:', result))
+    .catch(error => console.error('Payment error:', error));</code></pre>
+                </div>
+
+                <a href="https://github.com/yourusername/api-documentation-example" class="explore-btn" target="_blank">Explore API Documentation Example</a>
+            </section>
+
+            <section id="devops">
+                <h2>DevOps & Cloud</h2>
+                <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering high-quality software.</p>
+
+                <h3>CI/CD Pipelines</h3>
+                <p>CI/CD (Continuous Integration/Continuous Deployment) pipelines automate the processes of integrating code changes, building applications, and deploying them to production environments.</p>
+
+                <ul>
+                    <li><strong>Continuous Integration</strong>: Automatically run tests whenever code is committed</li>
+                    <li><strong>Continuous Deployment</strong>: Automatically deploy code to production environments after successful testing</li>
+                </ul>
+
+                <h3>Containerization with Docker</h3>
+                <p>Docker is a platform for developing, shipping, and running applications in containers. Containers package software with everything needed to run it, ensuring consistency across different environments.</p>
+
+                <div class="code-example">
+                    <pre><code><span class="code-comment"># Example Dockerfile for a Node.js application</span>
+FROM node:14  <span class="code-comment"># Start from the official Node.js 14 image</span>
+
+<span class="code-comment"># Create app directory</span>
+WORKDIR /usr/src/app
+
+<span class="code-comment"># Install dependencies</span>
+COPY package*.json ./
+
+RUN npm install
+RUN npm install -g nodemon  <span class="code-comment"># For development server</span>
+
+<span class="code-comment"># Bundle app source</span>
+COPY . .
+
+<span class="code-comment"># Expose the port the app runs on</span>
+EXPOSE 3000
+
+<span class="code-comment"># Run the application</span>
+CMD ["node", "server.js"]</code></pre>
+                </div>
+
+                <h3>Cloud Providers</h3>
+                <ul>
+                    <li><strong>AWS (Amazon Web Services)</strong>: Offers a wide range of services including computing, storage, databases, and machine learning</li>
+                    <li><strong>Azure</strong>: Microsoft's cloud platform with strong integration with other Microsoft products</li>
+                    <li><strong>Google Cloud Platform (GCP)</strong>: Known for strong data analytics and machine learning capabilities</li>
+                    <li><strong>Heroku</strong>: Developer-friendly platform as a service (PaaS)</li>
+                    <li><strong>DigitalOcean</strong>: Popular for simplicity and developer-friendly approach</li>
+                </ul>
+
+                <a href="https://github.com/yourusername/infrastructure-as-code-template" class="explore-btn" target="_blank">Explore Infrastructure-as-Code Template</a>
+            </section>
+
+            <section id="testing">
+                <h2>Testing</h2>
+                <p>Testing is a critical component of software development that ensures applications work as expected and remain reliable as new features are added.</p>
+
+                <h3>Types of Testing</h3>
+                <ul>
+                    <li><strong>Unit Testing</strong>: Tests individual components or functions in isolation</li>
+                    <li><strong>Integration Testing</strong>: Tests how different components work together</li>
+                    <li><strong>End-to-End Testing</strong>: Tests the complete application flow from user perspective</li>
+                    <li><strong>Performance Testing</strong>: Evaluates application performance under various conditions</li>
+                    <li><strong>Security Testing</strong>: Identifies vulnerabilities and security risks</li>
+                </ul>
+
+                <h3>Popular Testing Frameworks</h3>
+                <ul>
+                    <li><strong>Jest</strong>: JavaScript testing framework (primarily for unit tests)</li>
+                    <li><strong>Cypress</strong>: End-to-end testing framework for web applications</li>
+                    <li><strong>Selenium</strong>: Browser automation tool for web application testing</li>
+                    <li><strong>Mocha</strong>: JavaScript test framework working with various assertion libraries</li>
+                    <li><strong>Chai</strong>: BDD/TDD assertion library for Node.js and the browser</li>
+                </ul>
+
+                <h3>Code Example: Test Suite</h3>
+                <p>The following example demonstrates a test suite for a calculator function using Jest:</p>
+
+                <div class="code-example">
+                    <pre><code><span class="code-comment">// calculator.test.js</span>
+const calculator = require('./calculator');
+
+<span class="code-comment">// Test Suite for Addition Function</span>
+describe('add function', () => {
+    test('adds positive numbers correctly', () => {
+        expect(calculator.add(2, 3)).toBe(5);
+    });
+
+    test('adds negative numbers correctly', () => {
+        expect(calculator.add(-1, -2)).toBe(-3);
+    });
+
+    test('adds mixed numbers correctly', () => {
+        expect(calculator.add(-5, 10)).toBe(5);
+    });
+});
+
+<span class="code-comment">// Test Suite for Subtraction Function</span>
+describe('subtract function', () => {
+    test('subtracts positive numbers correctly', () => {
+        expect(calculator.subtract(5, 3)).toBe(2);
+    });
+
+    test('subtracts negative numbers correctly', () => {
+        expect(calculator.subtract(-1, -3)).toBe(2);
+    });
+
+    test('subtracts mixed numbers correctly', () => {
+        expect(calculator.subtract(-5, 3)).toBe(-8);
+    });
+});
+
+<span class="code-comment">// Test Suite for Multiplication Function</span>
+describe('multiply function', () => {
+    test('multiplies positive numbers correctly', () => {
+        expect(calculator.multiply(4, 5)).toBe(20);
+    });
+
+    test('multiplies with negative numbers correctly', () => {
+        expect(calculator.multiply(-3, 6)).toBe(-18);
+        expect(calculator.multiply(-3, -6)).toBe(18);
+    });
+});
+
+<span class="code-comment">// Test Suite for Division Function</span>
+describe('divide function', () => {
+    test('divides positive numbers correctly', () => {
+        expect(calculator.divide(10, 2)).toBe(5);
+    });
+
+    test('divides with negative numbers correctly', () => {
+        expect(calculator.divide(-15, 3)).toBe(-5);
+        expect(calculator.divide(-15, -3)).toBe(5);
+    });
+
+    test('throws error when dividing by zero', () => {
+        expect(() => calculator.divide(10, 0)).toThrow('Division by zero');
+    });
+});</code></pre>
+                </div>
+
+                <a href="https://github.com/yourusername/testing-guide" class="explore-btn" target="_blank">Explore Testing Best Practices Guide</a>
+            </section>
+
+            <section id="real-world">
+                <h2>Real-World Example: E-commerce Platform</h2>
+                <p>Building an e-commerce platform is a comprehensive project that requires utilizing all aspects of full stack development. Below is a breakdown of the architecture and components involved.</p>
+
+                <div class="diagram-container">
+                    <img src="https://via.placeholder.com/800x500?text=E-commerce+Architecture+Diagram" alt="E-commerce Platform Architecture Diagram">
+                </div>
+
+                <h3>System Architecture</h3>
+                <p>The e-commerce platform follows a three-tier architecture:</p>
+                <ol>
+                    <li><strong>Presentation Layer</strong>: User interface built with React.js</li>
+                    <li><strong>Application Layer</strong>: Business logic and API endpoints built with Node.js and Express</li>
+                    <li><strong>Data Layer</strong>: Database storage using PostgreSQL with Redis for caching</li>
+                </ol>
+
+                <h3>Key Components</h3>
+                <h4>1. User Authentication</h4>
+                <ul>
+                    <li>Registration and login system</li>
+                    <li>Password reset functionality</li>
+                    <li>OAuth integration with Google and Facebook</li>
+                    <li>JWT-based authentication</li>
+                </ul>
+
+                <h4>2. Product Catalog</h4>
+                <ul>
+                    <li>Product listing and filtering</li>
+                    <li>Search functionality</li>
+                    <li>Product reviews and ratings</li>
+                    <li>Inventory management</li>
+                </ul>
+
+                <h4>3. Shopping Cart</h4>
+                <ul>
+                    <li>Add/remove items</li>
+                    <li>Quantity adjustment</li>
+                    <li>Temporary storage using browser session storage</li>
+                    <li>Persistence to database for registered users</li>
+                </ul>
+
+                <h4>4. Checkout Process</h4>
+                <ul>
+                    <li>Address collection</li>
+                    <li>Payment integration with Stripe</li>
+                    <li>Order confirmation</li>
+                    <li>Email notifications</li>
+                </ul>
+
+                <h4>5. Payment Gateway Integration</h4>
+                <ul>
+                    <li>Stripe API integration</li>
+                    <li>Payment tokenization</li>
+                    <li>Transaction records</li>
+                    <li>Refund processing</li>
+                </ul>
+
+                <h4>6. Admin Dashboard</h4>
+                <ul>
+                    <li>Product management</li>
+                    <li>Order management</li>
+                    <li>User management</li>
+                    <li>Analytics and reporting</li>
+                </ul>
+
+                <h3>Technology Stack Selection Rationale</h3>
+                <p>For this e-commerce platform, we selected technologies based on the following considerations:</p>
+                <ul>
+                    <li><strong>React.js</strong>: For its component-based architecture and large ecosystem, suitable for building complex user interfaces</li>
+                    <li><strong>Node.js with Express</strong>: For its non-blocking I/O model which handles the concurrent requests typical in e-commerce</li>
+                    <li><strong>PostgreSQL</strong>: For its reliability, advanced data types, and support for complex queries needed for product catalogs</li>
+                    <li><strong>Redis</strong>: For caching frequently accessed data like product listings and user sessions</li>
+                    <li><strong>Docker</strong>: For containerization to ensure consistent environments across development, testing, and production</li>
+                    <li><strong>AWS</strong>: For scalable cloud infrastructure including S3 for image storage and RDS for database management</li>
+                </ul>
+
+                <a href="https://github.com/yourusername/ecommerce-platform" class="explore-btn" target="_blank">Explore E-commerce Platform GitHub Repository</a>
+            </section>
+
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What is the role of a full stack developer?</h3>
+                    <p>A full stack developer is capable of working on all layers of web development, including:</p>
+                    <ul>
+                        <li>Front-end development (user interface and client-side logic)</li>
+                        <li>Back-end development (server-side logic and databases)</li>
+                        <li>API development</li>
+                        <li>DevOps and deployment</li>
+                        <li>Basic UI/UX design principles</li>
+                    </ul>
+                    <p>While full stack developers may not be experts in all areas, they have working knowledge across the entire technology stack, enabling them to build complete applications independently or bridge communication gaps in teams with specialized roles.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do front-end and back-end systems communicate?</h3>
+                    <p>Front-end and back-end systems typically communicate through:</p>
+                    <ul>
+                        <li><strong>APIs (Application Programming Interfaces)</strong>: The back-end exposes endpoints that the front-end can call using HTTP requests (usually REST or GraphQL).</li>
+                        <li><strong>HTTP Methods</strong>: GET for retrieving data, POST for creating resources, PUT/PATCH for updating resources, DELETE for removing resources.</li>
+                        <li><strong>Data Formats</strong>: JSON (JavaScript Object Notation) is the most common format for data exchange between front-end and back-end.</li>
+                        <li><strong>Authentication</strong>: Mechanisms like JWT (JSON Web Tokens) or OAuth ensure secure communication between client and server.</li>
+                    </ul>
+                    <p>In modern applications, this communication is usually asynchronous, allowing the user interface to remain responsive while waiting for data from the server.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">What distinguishes full stack from front-end or back-end-only development?</h3>
+                    <p>The distinction lies in the scope of responsibilities:</p>
+                    <ul>
+                        <li><strong>Front-End Only</strong>: Focuses solely on the client-side experience, working with HTML, CSS, JavaScript, and front-end frameworks.</li>
+                        <li><strong>Back-End Only</strong>: Concentrates on server-side operations, databases, business logic, and APIs.</li>
+                        <li><strong>Full Stack</strong>: Combines both front-end and back-end skills, plus additional responsibilities such as:</li>
+                        <ul>
+                            <li>Database design and management</li>
+                            <li>API development and integration</li>
+                            <li>Application architecture design</li>
+                            <li>Deployment and DevOps practices</li>
+                            <li>Basic UI/UX considerations</li>
+                        </ul>
+                    </ul>
+                    <p>Full stack developers can work independently on complete applications or serve as bridges between specialized front-end and back-end teams.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Why are databases and APIs critical to full stack architecture?</h3>
+                    <p>Databases and APIs are fundamental to full stack architecture for these reasons:</p>
+                    <ul>
+                        <li><strong>Databases</strong>:
+                            <ul>
+                                <li>Provide persistent storage for application data</li>
+                                <li>Enable efficient data retrieval and manipulation</li>
+                                <li>Ensure data integrity and security</li>
+                                <li>Support scalability and performance requirements</li>
+                            </ul>
+                        </li>
+                        <li><strong>APIs</strong>:
+                            <ul>
+                                <li>Facilitate communication between different application components</li>
+                                <li>Enable separation of concerns between front-end and back-end</li>
+                                <li>Provide a defined contract for data exchange</li>
+                                <li>Allow for independent development and scaling of components</li>
+                                <li>Make integration with third-party services possible</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Together, databases and APIs form the backbone of data management and component communication in full stack applications.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">How do DevOps tools integrate with development?</h3>
+                    <p>DevOps tools integrate with development processes in several ways:</p>
+                    <ul>
+                        <li><strong>Version Control</strong>: Tools like Git enable collaboration and tracking of code changes.</li>
+                        <li><strong>CI/CD Pipelines</strong>: Automate testing and deployment when code is committed to version control.</li>
+                        <li><strong>Containerization</strong>: Docker packages applications with their dependencies for consistent environments across development, testing, and production.</li>
+                        <li><strong>Orchestration</strong>: Kubernetes manages containerized applications, enabling scaling and high availability.</li>
+                        <li><strong>Monitoring</strong>: Tools like Prometheus and Grafana provide insights into application performance and infrastructure health.</li>
+                        <li><strong>Logging</strong>: Centralized logging with tools like ELK Stack (Elasticsearch, Logstash, Kibana) helps with debugging and auditing.</li>
+                        <li><strong>Infrastructure as Code</strong>: Tools like Terraform and AWS CloudFormation enable provisioning and managing infrastructure through code.</li>
+                    </ul>
+                    <p>By integrating DevOps practices and tools, development teams can achieve faster release cycles, improved collaboration between development and operations, and more reliable deployments.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="fullstack.js"></script>
+</body>
+</html>
