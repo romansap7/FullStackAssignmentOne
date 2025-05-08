@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Guides Hub</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+        .guide-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .guide-card:hover {
+            transform: translateY(-5px);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 2rem;
+        }
+        .guide-card h2 {
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+        .guide-card p {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Development Learning Guides</h1>
+        <div class="guide-grid">
+            <div class="guide-card">
+                <h2>HTML Guide</h2>
+                <p>Master the foundation of web development</p>
+                <a href="hyper-text.html">Explore HTML</a>
+            </div>
+            
+            <div class="guide-card">
+                <h2>CSS Guide</h2>
+                <p>Learn styling and layout techniques</p>
+                <a href="css.html">Explore CSS</a>
+            </div>
+
+            <div class="guide-card">
+                <h2>JavaScript Guide</h2>
+                <p>Discover interactive web development</p>
+                <a href="javascript.html">Explore JavaScript</a>
+            </div>
+
+            <div class="guide-card">
+                <h2>Bootstrap Guide</h2>
+                <p>Build responsive websites quickly</p>
+                <a href="bootstrap.html">Explore Bootstrap</a>
+            </div>
+
+            <div class="guide-card">
+                <h2>Full Stack Guide</h2>
+                <p>Complete web development roadmap</p>
+                <a href="fullStack.html">Explore Full Stack</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
